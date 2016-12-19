@@ -30,7 +30,7 @@ $ make get-packet-profiles
 ```
 
 ## Upload SSH key
-This assumes you have a `id_rsa.pub` key the current directory!
+This assumes you have a `id_rsa.pub` key in the current directory!
 ```
 $ make upload-packet-ssh-key
 ```

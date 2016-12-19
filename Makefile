@@ -6,9 +6,6 @@ get-dependencies:
 clear-dependencies:
 	rm -rf kismatic provision ansible cfssl
 
-add-packet-profile:
-	packet admin add-profile
-
 create-packet-project:
 	packet admin create-project --name "Software Circus KET Demo" -payment-id ""
 
@@ -20,6 +17,3 @@ get-packet-projects:
 
 get-packet-profiles:
 	packet admin list-profiles
-
-get-packet-ssh-keys:
-	packet admin list-sshkeys
