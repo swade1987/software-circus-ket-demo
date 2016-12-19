@@ -55,7 +55,7 @@ $ export PACKET_SSH_KEY_PATH=./software-circus.pem
 $ make create-infrastructure
 ```
 
-## 5. Tweak to kismatic-cluster.yaml
+## 5. Tweak the kismatic-cluster.yaml
 The following line in the YAML file
 
 ```
