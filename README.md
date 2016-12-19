@@ -55,7 +55,20 @@ $ export PACKET_SSH_KEY_PATH=./software-circus.pem
 $ make create-infrastructure
 ```
 
-## 5. Provision infrastructure using KET
+## 5. Tweak to kismatic-cluster.yaml
+The following line in the YAML file
+
+```
+ssh_key: ./software-circus.pem
+```
+
+needs to be changed to be the **full** path, something like
+
+```
+ssh_key: /Users/StevenWade/projects/github/swade1987/software-circus-ket-demo/software-circus.pem
+```
+
+## 6. Provision infrastructure using KET
 ```
 $ make provision-cluster
 ```
