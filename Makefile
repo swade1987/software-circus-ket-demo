@@ -20,3 +20,6 @@ create-packet-project:
 
 upload-packet-ssh-key:
 	packet admin create-sshkey --label software-circus --file id_rsa.pub
+
+create-cluster:
+	PACKET_API_KEY=<api_uuid> PACKET_PROJECT_ID=<project_uuid> PACKET_SSH_KEY_PATH=<path_to_pem> ./provision packet create

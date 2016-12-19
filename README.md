@@ -1,5 +1,5 @@
 # Software Circus KET Demo
-A repo for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Amsterdam (10th Jan 2017).
+A repository for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Amsterdam (10th Jan 2017).
 The repository uses [Packet.net](https://www.packet.net/) to create the Kubernetes cluster.
 
 # Prerequisites
@@ -58,7 +58,12 @@ $ make upload-packet-ssh-key
 ```
 $ packet admin delete-project --project-id ""
 ```
+
 ## Delete SSH key
 ```
 $ packet admin delete-sshkey --key-id ""
+```
+## Delete cluster
+```
+$ PACKET_API_KEY=<api_uuid> PACKET_PROJECT_ID=<project_uuid> PACKET_SSH_KEY_PATH=<path_to_pem> ./provision packet delete --all
 ```
