@@ -4,7 +4,19 @@ get-dependencies:
 	chmod +x provision
 
 clear-dependencies:
-	rm -rf kismatic
-	rm -rf provision
-	rm -rf ansible
-	rm -rf cfssl
+	rm -rf kismatic provision ansible cfssl
+
+add-packet-profile:
+	packet admin add-profile
+
+get-packet-projects:
+	packet admin list-projects
+
+get-packet-profiles:
+	packet admin list-profiles
+
+create-packet-project:
+	packet admin create-project --name "Software Circus KET Demo" -payment-id ""
+
+delete--packet-project:
+	packet admin delete-project --project-id ""
