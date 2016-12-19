@@ -3,6 +3,15 @@ get-dependencies:
 	wget -O provision https://kismatic-installer.s3-accelerate.amazonaws.com/latest-darwin/provision
 	chmod +x provision
 
+get-packet-projects:
+	packet admin list-projects
+
+get-packet-profiles:
+	packet admin list-profiles
+
+get-ssh-keys:
+	packet admin list-sshkeys
+
 clear-dependencies:
 	rm -rf kismatic provision ansible cfssl
 
@@ -11,9 +20,3 @@ create-packet-project:
 
 upload-packet-ssh-key:
 	packet admin create-sshkey --label software-circus --file id_rsa.pub
-
-get-packet-projects:
-	packet admin list-projects
-
-get-packet-profiles:
-	packet admin list-profiles
