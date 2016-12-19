@@ -53,11 +53,13 @@ $ make upload-packet-ssh-key
 ```
 
 ## Create infrastructure on Packet.net
-The following values need to be set as environment variables **before** executing the command below:
+The following environment variables need to be set **before** executing the command below:
 
-1. PACKET_API_KEY
-2. PACKET_PROJECT_ID
-3. PACKET_SSH_KEY_PATH
+```
+$ export PACKET_API_KEY=
+$ export PACKET_PROJECT_ID=
+$ export PACKET_SSH_KEY_PATH=./id_rsa.pub
+```
 
 ```
 $ make create-infrastructure

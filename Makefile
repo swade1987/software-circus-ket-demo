@@ -19,7 +19,7 @@ upload-packet-ssh-key:
 	packet admin create-sshkey --label software-circus --file id_rsa.pub
 
 create-infrastructure:
-	./provision packet create -f -e 3 -m 2 -w 5
+	./provision packet create -e 3 -m 2 -w 5
 
 provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
