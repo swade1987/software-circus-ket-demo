@@ -26,46 +26,36 @@ $ make get-dependencies
 
 # Usage
 
-## Create new project
+## 1. Create a new project
 ```
 $ make create-packet-project
 ```
 
-## List projects
-```
-$ make get-packet-projects
-```
+## 2. Generate and upload SSH key to packet.net
+Execute the following commands in order:
 
-## Obtain API Keys
 ```
-$ make get-packet-profiles
-```
-
-## Obtain SSH Keys
-```
-$ make get-ssh-keys
-```
-
-## Upload SSH key
-This assumes you have a `id_rsa.pub` key in the current directory!
-```
+$ make generate-ssh-keypair
 $ make upload-packet-ssh-key
 ```
 
-## Create infrastructure on Packet.net
-The following environment variables need to be set **before** executing the command below:
+## 3. Obtain Project ID and API key.
+```
+$ make get-packet-projects
+$ make get-packet-profiles
+```
+
+## 4. Create infrastructure
+Execute the following commands in order:
 
 ```
 $ export PACKET_API_KEY=
 $ export PACKET_PROJECT_ID=
-$ export PACKET_SSH_KEY_PATH=./id_rsa.pub
-```
-
-```
+$ export PACKET_SSH_KEY_PATH=./software-circus.pem
 $ make create-infrastructure
 ```
 
-## Provision infrastructure using KET
+## 5. Provision infrastructure using KET
 ```
 $ make provision-cluster
 ```
