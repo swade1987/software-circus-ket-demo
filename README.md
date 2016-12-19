@@ -6,12 +6,13 @@ To use this solution, the following Packet CLI needs to be installed [https://gi
 
 Follow the `README.md` for the project to guide you through the installation process.
 
-# Usage
+**IMPORTANT:** You need to create a default profile for the Packet CLI usage the command below to use this project:
 
-## Add default profile
 ```
-$ make add-packet-profile
+$ packet admin add-profile
 ```
+
+# Usage
 
 ## Create new project
 ```
