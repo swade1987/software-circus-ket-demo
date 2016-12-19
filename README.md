@@ -3,11 +3,11 @@ A repo for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Amsterda
 
 # Usage
 
-To use this solution, the following Packet CLI needs to be installed:--
+To use this solution, the following Packet CLI needs to be installed:
 
-[https://github.com/ebsarr/packet](https://github.com/ebsarr/packet)--
+[https://github.com/ebsarr/packet](https://github.com/ebsarr/packet)
 
-follow the `README.md` for the project to guide you through the installation process.
+Follow the `README.md` for the project to guide you through the installation process.
 
 ## Add default profile
 ```
