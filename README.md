@@ -52,6 +52,16 @@ This assumes you have a `id_rsa.pub` key in the current directory!
 $ make upload-packet-ssh-key
 ```
 
+## Create infrastructure on Packet.net
+```
+$ make create-infrastructure
+```
+
+## Provision infrastructure using KET
+```
+$ make provision-cluster
+```
+
 # Useful commands
 
 ## Delete project
@@ -63,6 +73,7 @@ $ packet admin delete-project --project-id ""
 ```
 $ packet admin delete-sshkey --key-id ""
 ```
+
 ## Delete cluster
 ```
 $ PACKET_API_KEY=<api_uuid> \

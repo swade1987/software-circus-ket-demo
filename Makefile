@@ -12,14 +12,17 @@ get-packet-profiles:
 get-ssh-keys:
 	packet admin list-sshkeys
 
-clear-dependencies:
-	rm -rf kismatic provision ansible cfssl
-
 create-packet-project:
-	packet admin create-project --name "Software Circus KET Demo" -payment-id ""
+	packet admin create-project --name "Software Circus KET Demo"
 
 upload-packet-ssh-key:
 	packet admin create-sshkey --label software-circus --file id_rsa.pub
 
-create-cluster:
-	PACKET_API_KEY=<api_uuid> PACKET_PROJECT_ID=<project_uuid> PACKET_SSH_KEY_PATH=<path_to_pem> ./provision packet create
+create-infrastructure:
+	PACKET_API_KEY=<api_uuid> \
+	PACKET_PROJECT_ID=<project_uuid> \
+	PACKET_SSH_KEY_PATH=<path_to_pem> \
+	./provision packet create -f -e 3 -m 2 -w 5
+
+provision-cluster:
+	./kismatic install apply -f kismatic-cluster.yaml
