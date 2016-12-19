@@ -6,7 +6,7 @@ To use this solution, the following Packet CLI needs to be installed [https://gi
 
 Follow the `README.md` for the project to guide you through the installation process.
 
-**IMPORTANT:** You need to create a default profile for the Packet CLI usage the command below to use this project:
+**IMPORTANT:** You need to create a default profile for the Packet CLI using the command below to use this project:
 
 ```
 $ packet admin add-profile
@@ -22,4 +22,15 @@ $ make create-packet-project
 ## List projects
 ```
 $ make get-packet-projects
+```
+
+## Obtain API key
+```
+$ make get-packet-profiles
+```
+
+## Upload SSH key
+This assumes you have a `id_rsa.pub` key the current directory!
+```
+$ make upload-packet-ssh-key
 ```

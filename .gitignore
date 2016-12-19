@@ -2,3 +2,4 @@ ansible
 cfssl
 kismatic
 provision
+id_rsa*
