@@ -1,8 +1,13 @@
+# Directories
 ansible
 cfssl
 kismatic
 provision
-id_rsa*
-software-circus.*
-kismatic-cluster.yaml
 runs
+generated
+
+# Files
+*.pem
+*.pem.pub
+kismatic-cluster.yaml
+kubeconfig

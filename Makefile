@@ -26,3 +26,4 @@ create-infrastructure:
 
 provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
+	cp generated/kubeconfig .
