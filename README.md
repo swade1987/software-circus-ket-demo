@@ -65,5 +65,8 @@ $ packet admin delete-sshkey --key-id ""
 ```
 ## Delete cluster
 ```
-$ PACKET_API_KEY=<api_uuid> PACKET_PROJECT_ID=<project_uuid> PACKET_SSH_KEY_PATH=<path_to_pem> ./provision packet delete --all
+$ PACKET_API_KEY=<api_uuid> \
+PACKET_PROJECT_ID=<project_uuid> \
+PACKET_SSH_KEY_PATH=<path_to_pem> \
+./provision packet delete --all
 ```
