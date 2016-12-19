@@ -21,5 +21,5 @@ get-packet-projects:
 get-packet-profiles:
 	packet admin list-profiles
 
-delete--packet-project:
-	packet admin delete-project --project-id ""
+get-packet-ssh-keys:
+	packet admin list-sshkeys

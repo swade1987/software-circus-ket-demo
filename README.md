@@ -34,3 +34,14 @@ This assumes you have a `id_rsa.pub` key the current directory!
 ```
 $ make upload-packet-ssh-key
 ```
+
+# Useful commands
+
+## Delete project
+```
+$ packet admin delete-project --project-id ""
+```
+## Delete SSH key
+```
+$ packet admin delete-sshkey --key-id ""
+```
