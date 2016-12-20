@@ -5,7 +5,7 @@ kismatic
 provision
 runs
 generated
-1024apis/software-circus
+100apis/software-circus
 
 # Files
 *.pem
@@ -13,4 +13,4 @@ generated
 kismatic-cluster.yaml
 kubeconfig
 .DS_Store
-1024apis
+100apis
