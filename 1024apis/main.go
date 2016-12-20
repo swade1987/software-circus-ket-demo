@@ -34,7 +34,7 @@ func main() {
 
 	services := createServices(*numRes, *maxDep)
 
-	generateMatrix(services, *baseDir)
+	//generateMatrix(services, *baseDir)
 	writeServicesToYaml(services, *baseDir, *baseTemplate)
 	writeServicesToCSV(services, *baseDir)
 
