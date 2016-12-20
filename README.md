@@ -1,6 +1,9 @@
 # Software Circus KET Demo
 A repository for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Amsterdam (10th Jan 2017).
+
 The repository uses [Packet.net](https://www.packet.net/) to provide the underlying infrastructure.
+
+After provisioning the cluster 100 apis will be created and deployed in a matter of seconds.
 
 # Prerequisites
 To use this solution, the following Packet CLI needs to be installed [https://github.com/ebsarr/packet](https://github.com/ebsarr/packet)
