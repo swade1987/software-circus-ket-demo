@@ -79,7 +79,8 @@ $ make provision-cluster
 ## 7. Setup Weave Cloud
 Browse to [https://cloud.weave.works](https://cloud.weave.works) create a new instance and locate your token and execute
 ```
-$ kubectl apply --kubeconfig kubeconfig-f 'https://cloud.weave.works/launch/k8s/weavescope.yaml?service-token=<token>'
+$ kubectl apply --kubeconfig kubeconfig \
+-f 'https://cloud.weave.works/launch/k8s/weavescope.yaml?service-token=<token>'
 ```
 
 ## 8. Create 100 APIs
