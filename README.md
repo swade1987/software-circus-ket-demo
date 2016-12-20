@@ -83,13 +83,9 @@ $ kubectl apply --kubeconfig kubeconfig \
 -f 'https://cloud.weave.works/launch/k8s/weavescope.yaml?service-token=<token>'
 ```
 
-## 8. Create 100 APIs
+## 8. Create and deploy 100 APIs
 ```
 $ make create-100-apis
-```
-
-## 9. Deploy the 100 APIs
-```
 $ make deploy-100-apis
 ```
 
