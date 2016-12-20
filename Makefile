@@ -36,6 +36,9 @@ create-100-apis:
 deploy-100-apis:
 	kubectl create --kubeconfig kubeconfig -f 1024apis/software-circus
 
+delete-100-apis:
+	kubectl delete --kubeconfig kubeconfig -f 1024apis/software-circus
+
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 1024apis/software-circus
 	rm -rf *.pem *.pem.pub
