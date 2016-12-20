@@ -76,12 +76,18 @@ ssh_key: /Users/StevenWade/projects/github/swade1987/software-circus-ket-demo/so
 $ make provision-cluster
 ```
 
-## 6. Create 100 APIs ready to deploy to our Kubernetes cluster
+## 7. Setup Weave Cloud
+Browse to [https://cloud.weave.works](https://cloud.weave.works) create a new instance and locate your token and execute
+```
+$ kubectl apply --kubeconfig kubeconfig-f 'https://cloud.weave.works/launch/k8s/weavescope.yaml?service-token=<token>'
+```
+
+## 8. Create 100 APIs
 ```
 $ make create-100-apis
 ```
 
-## 7. Deploy 100 APIs to our Kubernetes cluster
+## 9. Deploy the 100 APIs
 ```
 $ make deploy-100-apis
 ```

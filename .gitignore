@@ -14,3 +14,4 @@ kismatic-cluster.yaml
 kubeconfig
 .DS_Store
 100apis
+weave-cloud-token
