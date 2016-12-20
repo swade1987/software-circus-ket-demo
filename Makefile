@@ -39,6 +39,12 @@ deploy-100-apis:
 delete-100-apis:
 	kubectl delete --kubeconfig kubeconfig -f 100apis/software-circus
 
+deploy-weave-scope:
+	kubectl apply --kubeconfig kubeconfig -f weave-scope.yaml
+	kubectl port-forward --kubeconfig kubeconfig\
+	$(kubectl get pod --kubeconfig kubeconfig --selector=weave-scope-component=app -o jsonpath='{.items..metadata.name}') \
+	4040
+
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 100apis/software-circus
 	rm -rf *.pem *.pem.pub
