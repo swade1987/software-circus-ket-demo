@@ -30,6 +30,12 @@ provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
 
+create-100-apis:
+	cd 1024apis && go build && ./1024apis -n=100 -m=2 -d=$(DEMO_NAME)
+
+deploy-100-apis:
+	kubectl create --kubeconfig kubeconfig -f 1024apis/software-circus
+
 clean:
-	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision
+	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 1024apis/software-circus
 	rm -rf *.pem *.pem.pub
