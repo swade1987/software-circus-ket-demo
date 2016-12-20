@@ -73,6 +73,16 @@ ssh_key: /Users/StevenWade/projects/github/swade1987/software-circus-ket-demo/so
 $ make provision-cluster
 ```
 
+## 6. Create 100 APIs ready to deploy to our Kubernetes cluster
+```
+$ make create-100-apis
+```
+
+## 7. Deploy 100 APIs to our Kubernetes cluster
+```
+$ make deploy-100-apis
+```
+
 # Useful commands
 
 ## Delete project
@@ -91,4 +101,9 @@ $ PACKET_API_KEY=<api_uuid> \
 PACKET_PROJECT_ID=<project_uuid> \
 PACKET_SSH_KEY_PATH=<path_to_pem> \
 ./provision packet delete --all
+```
+
+## Clean files and directories
+```
+$ make clean
 ```
