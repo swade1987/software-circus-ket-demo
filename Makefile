@@ -24,7 +24,7 @@ get-ssh-keys:
 	packet admin list-sshkeys
 
 create-infrastructure:
-	./provision packet create -e 3 -m 2 -w 5
+	./provision packet create -e 3 -m 2 -w 5 --region eu-west
 
 provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
