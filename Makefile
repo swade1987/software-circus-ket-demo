@@ -31,7 +31,7 @@ provision-cluster:
 	cp generated/kubeconfig .
 
 create-100-apis:
-	cd 1024apis && go build && ./1024apis -n=100 -m=2 -d=$(DEMO_NAME)
+	cd 100apis && go build && ./100apis -n=100 -m=2 -d=$(DEMO_NAME)
 
 deploy-100-apis:
 	kubectl create --kubeconfig kubeconfig -f 100apis/software-circus
