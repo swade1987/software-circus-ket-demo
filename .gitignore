@@ -11,3 +11,4 @@ generated
 *.pem.pub
 kismatic-cluster.yaml
 kubeconfig
+.DS_Store
