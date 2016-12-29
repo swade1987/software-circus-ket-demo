@@ -17,7 +17,7 @@ upload-packet-ssh-key:
 get-packet-projects:
 	packet admin list-projects
 
-get-packet-apikey:
+get-packet-api-key:
 	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
 
 get-ssh-keys:

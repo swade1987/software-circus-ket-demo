@@ -3,9 +3,9 @@ A repository for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Am
 
 The repository uses [Packet.net](https://www.packet.net/) to provide the underlying infrastructure.
 
-After provisioning the the demo will show two pieces of functionality:
+After provisioning the cluster the demo will show two pieces of KET functionality:
 
-1. The ingress functionality
+1. Ingress
 2. Adding a new worker node
 
 # Prerequisites
@@ -48,7 +48,7 @@ $ make upload-packet-ssh-key
 ## 3. Obtain Project ID and API key.
 ```
 $ make get-packet-projects
-$ make get-packet-apikey
+$ make get-packet-api-key
 ```
 
 ## 4. Create infrastructure
