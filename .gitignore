@@ -5,13 +5,8 @@ kismatic
 provision
 runs
 generated
-100apis/software-circus
 
 # Files
-*.pem
-*.pem.pub
 kismatic-cluster.yaml
 kubeconfig
 .DS_Store
-100apis
-weave-cloud-token
