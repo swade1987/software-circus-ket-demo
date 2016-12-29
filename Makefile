@@ -33,7 +33,7 @@ provision-cluster:
 add-worker-node:
 	packet baremetal create-device \
 	--facility ams1 \
-	--hostname worker-01 \
+	--hostname worker-06 \
 	--os-type ubuntu_16_04 \
 	--project-id $PACKET_PROJECT_ID
 
