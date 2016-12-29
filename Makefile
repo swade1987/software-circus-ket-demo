@@ -22,12 +22,14 @@ upload-packet-ssh-key:
 	packet admin create-sshkey --label $(DEMO_NAME) --file $(DEMO_NAME).pem.pub
 
 get-packet-project-id:
-	export NAME=$(DEMO_NAME) && packet admin list-projects | jq -r '.[] | select(.name=="'"${NAME}"'") | .id '
+	export NAME=$(DEMO_NAME)
+	packet admin list-projects | jq -r '.[] | select(.name=="'"${NAME}"'") | .id '
 
 get-packet-api-key:
 	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
 
 create-infrastructure:
+	chmod 600 $(DEMO_NAME).pem
 	./provision packet create -e 3 -m 2 -w 5 --region us-east
 
 provision-cluster:
