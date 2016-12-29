@@ -22,9 +22,6 @@ get-packet-project-id:
 get-packet-api-key:
 	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
 
-get-ssh-keys:
-	packet admin list-sshkeys
-
 create-infrastructure:
 	./provision packet create -e 3 -m 2 -w 5 --region eu-west
 
