@@ -47,7 +47,7 @@ $ make upload-packet-ssh-key
 
 ## 3. Obtain Project ID and API key.
 ```
-$ make get-packet-projects
+$ make get-packet-project-id
 $ make get-packet-api-key
 ```
 

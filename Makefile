@@ -1,5 +1,4 @@
 DEMO_NAME = software-circus
-TEST="Kismatic Env 1"
 
 get-dependencies:
 	wget -O - https://kismatic-installer.s3-accelerate.amazonaws.com/latest-darwin/kismatic.tar.gz | tar -zx
@@ -15,8 +14,8 @@ generate-ssh-keypair:
 upload-packet-ssh-key:
 	packet admin create-sshkey --label $(DEMO_NAME) --file $(DEMO_NAME).pem.pub
 
-get-packet-projects:
-	export NAME=$(TEST) && packet admin list-projects | jq '.[] | select(.name=="'"${NAME}"'")'
+get-packet-project-id:
+	export NAME=$(DEMO_NAME) && packet admin list-projects | jq -r '.[] | select(.name=="'"${NAME}"'") | .id '
 
 get-packet-api-key:
 	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
