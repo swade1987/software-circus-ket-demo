@@ -8,7 +8,7 @@ get-dependencies:
 	chmod +x provision
 
 create-packet-project:
-	packet admin create-project --name "$(DEMO_NAME) demo"
+	packet admin create-project --name "$(DEMO_NAME)"
 
 generate-ssh-keypair:
 	ssh-keygen -t rsa -f $(DEMO_NAME).pem -N ""
@@ -34,7 +34,7 @@ create-packet-new-worker-node:
 	--facility ams1 \
 	--hostname $(ADDITIONAL_WORKER_NODE_NAME) \
 	--os-type ubuntu_16_04 \
-	--project-id $PACKET_PROJECT_ID
+	--project-id $$PACKET_PROJECT_ID
 
 add-worker-node-to-cluster:
 	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) $(ADDITIONAL_WORKER_NODE_IP)
