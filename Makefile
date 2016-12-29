@@ -1,4 +1,5 @@
 DEMO_NAME = software-circus
+TEST="Kismatic Env 1"
 
 get-dependencies:
 	wget -O - https://kismatic-installer.s3-accelerate.amazonaws.com/latest-darwin/kismatic.tar.gz | tar -zx
@@ -15,7 +16,7 @@ upload-packet-ssh-key:
 	packet admin create-sshkey --label $(DEMO_NAME) --file $(DEMO_NAME).pem.pub
 
 get-packet-projects:
-	packet admin list-projects
+	export NAME=$(TEST) && packet admin list-projects | jq '.[] | select(.name=="'"${NAME}"'")'
 
 get-packet-api-key:
 	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
@@ -29,6 +30,13 @@ create-infrastructure:
 provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
+
+add-worker-node:
+	packet baremetal create-device \
+	--facility ams1 \
+	--hostname worker-01 \
+	--os-type ubuntu_16_04 \
+	--project-id $PACKET_PROJECT_ID
 
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 100apis/software-circus
