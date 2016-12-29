@@ -1,4 +1,6 @@
 DEMO_NAME = software-circus
+ADDITIONAL_WORKER_NODE_NAME = worker-06
+ADDITIONAL_WORKER_NODE_IP =
 
 get-dependencies:
 	wget -O - https://kismatic-installer.s3-accelerate.amazonaws.com/latest-darwin/kismatic.tar.gz | tar -zx
@@ -30,12 +32,15 @@ provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
 
-add-worker-node:
+create-packet-new-worker-node:
 	packet baremetal create-device \
 	--facility ams1 \
-	--hostname worker-06 \
+	--hostname $(ADDITIONAL_WORKER_NODE_NAME) \
 	--os-type ubuntu_16_04 \
 	--project-id $PACKET_PROJECT_ID
+
+add-worker-node-to-cluster:
+	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) $(ADDITIONAL_WORKER_NODE_IP)
 
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 100apis/software-circus

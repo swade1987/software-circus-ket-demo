@@ -79,11 +79,15 @@ ssh_key: /Users/StevenWade/projects/github/swade1987/software-circus-ket-demo/so
 $ make provision-cluster
 ```
 
-## 7. Setup Weave Cloud
-Browse to [https://cloud.weave.works](https://cloud.weave.works) create a new instance and locate your token and execute
+## 7. Create a new worker node on Packet
 ```
-$ kubectl apply --kubeconfig kubeconfig \
--f 'https://cloud.weave.works/launch/k8s/weavescope.yaml?service-token=<token>'
+$ make create-packet-new-worker-node
+```
+
+## 8. Add the new worker to the KET cluster
+Update the `ADDITIONAL_WORKER_NODE_IP` value in the Makefile and then execute:
+```
+$ make add-worker-node-to-cluster
 ```
 
 # Useful commands
