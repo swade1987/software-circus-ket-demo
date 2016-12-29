@@ -33,6 +33,7 @@ create-infrastructure:
 	./provision packet create -e 3 -m 2 -w 5 --region us-east
 
 provision-cluster:
+	sed -i "/\b\(internalip\)\b/d" kismatic-cluster.yaml
 	./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
 
