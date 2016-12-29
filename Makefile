@@ -17,8 +17,8 @@ upload-packet-ssh-key:
 get-packet-projects:
 	packet admin list-projects
 
-get-packet-profiles:
-	packet admin list-profiles
+get-packet-apikey:
+	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
 
 get-ssh-keys:
 	packet admin list-sshkeys
@@ -29,15 +29,6 @@ create-infrastructure:
 provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
-
-create-100-apis:
-	cd 100apis && go build && ./100apis -n=100 -m=2 -d=$(DEMO_NAME)
-
-deploy-100-apis:
-	kubectl create --kubeconfig kubeconfig -f 100apis/software-circus
-
-delete-100-apis:
-	kubectl delete --kubeconfig kubeconfig -f 100apis/software-circus
 
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 100apis/software-circus

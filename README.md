@@ -3,7 +3,10 @@ A repository for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Am
 
 The repository uses [Packet.net](https://www.packet.net/) to provide the underlying infrastructure.
 
-After provisioning the cluster 100 apis will be created and deployed in a matter of seconds.
+After provisioning the the demo will show two pieces of functionality:
+
+1. The ingress functionality
+2. Adding a new worker node
 
 # Prerequisites
 To use this solution, the following Packet CLI needs to be installed [https://github.com/ebsarr/packet](https://github.com/ebsarr/packet)
@@ -45,7 +48,7 @@ $ make upload-packet-ssh-key
 ## 3. Obtain Project ID and API key.
 ```
 $ make get-packet-projects
-$ make get-packet-profiles
+$ make get-packet-apikey
 ```
 
 ## 4. Create infrastructure
@@ -81,12 +84,6 @@ Browse to [https://cloud.weave.works](https://cloud.weave.works) create a new in
 ```
 $ kubectl apply --kubeconfig kubeconfig \
 -f 'https://cloud.weave.works/launch/k8s/weavescope.yaml?service-token=<token>'
-```
-
-## 8. Create and deploy 100 APIs
-```
-$ make create-100-apis
-$ make deploy-100-apis
 ```
 
 # Useful commands
