@@ -27,7 +27,7 @@ Additionally we need to obtain the binaries for the following two projects:
 
 To make this possible execute the following command:
 ```
-$ make get-dependencies
+$ make get-darwin-dependencies
 ```
 
 # Usage
@@ -37,19 +37,31 @@ $ make get-dependencies
 $ make create-packet-project
 ```
 
-## 2. Generate and upload SSH key to packet.net
-Execute the following commands in order:
-
+## 2. Upload the SSH key to packet.net
 ```
-$ make generate-ssh-keypair
 $ make upload-packet-ssh-key
 ```
 
-## 3. Obtain Project ID and API key.
+## 3. Obtain the Project ID from packet.net.
 ```
 $ make get-packet-project-id
-$ make get-packet-api-key
 ```
+
+## 4. Create a bootstrap node on packet.net
+Set the `PACKET_PROJECT_ID` environment variable from the command execute above:
+```
+$ export PACKET_PROJECT_ID=
+```
+then execute:
+```
+$ make create-bootstrap-node
+```
+
+## 5. Provision the bootstrap node
+To provision the bootstrap node follow the steps [here](docs/provision-bootstrap-node.md)
+
+
+########################################################
 
 ## 4. Create infrastructure
 Execute the following commands in order:
