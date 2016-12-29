@@ -30,7 +30,9 @@ To make this possible execute the following command:
 $ make get-darwin-dependencies
 ```
 
-# Usage
+# Local machine steps
+
+The following steps should be executed from your local machine:
 
 ## 1. Create a new project
 ```
@@ -60,6 +62,31 @@ $ make create-bootstrap-node
 ## 5. Provision the bootstrap node
 To provision the bootstrap node follow the steps [here](docs/provision-bootstrap-node.md)
 
+# Bootstrap steps
+
+The following steps should be executed from the bootstrap node:
+
+## 1. Create the infrastructure on packet.net
+
+Obtain the project id and set the necessary environment variable:
+
+```
+$ make get-packet-project-id
+$ export PACKET_PROJECT_ID=
+```
+
+Obtain the api key and set the necessary environment variable:
+
+```
+$ make get-packet-api-key
+$ export PACKET_API_KEY=
+```
+
+Finally set the SSH key location and create the infrastructure
+```
+$ export PACKET_SSH_KEY_PATH=./software-circus.pem
+$ make create-infrastructure
+```
 
 ########################################################
 

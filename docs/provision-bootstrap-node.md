@@ -12,6 +12,7 @@ $ apt-get update
 $ apt-get upgrade
 $ sudo apt-get install build-essential
 $ sudo apt-get install jq
+$ sudo apt-get install git
 ```
 
 ## 1. Install Golang
@@ -28,14 +29,14 @@ $ sudo mv go /usr/local
 Open the profile file using the command below:
 
 ```
-sudo nano ~/.profile
+$ sudo nano ~/.profile
 ```
 
 Add the following lines to the file
 
 ```
-$ export GOPATH=$HOME/work
-$ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export GOPATH=$HOME/work
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 ```
 
 Finally reload your profile:
@@ -60,5 +61,6 @@ $ git clone https://github.com/swade1987/software-circus-ket-demo.git
 ## 5. Download the necessary dependencies for this demo
 
 ```
+$ cd software-circus-ket-demo
 $ make get-linux-dependencies
 ```
