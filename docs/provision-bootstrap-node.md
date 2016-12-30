@@ -64,3 +64,7 @@ $ git clone https://github.com/swade1987/software-circus-ket-demo.git
 $ cd software-circus-ket-demo
 $ make get-linux-dependencies
 ```
+
+## 6. Cluster creation
+
+To created the kubernetes cluster follow the steps [here](cluster-creation.md)
