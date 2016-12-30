@@ -26,22 +26,22 @@ $ make get-darwin-dependencies
 
 # Usage
 
-Create a new project
+## 1. Create a new project
 ```
 $ make create-packet-project
 ```
 
-Upload the SSH key to packet.net
+## 2. Upload the SSH key to packet.net
 ```
 $ make upload-packet-ssh-key
 ```
 
-Obtain the Project ID from packet.net.
+## 3. Obtain the Project ID from packet.net.
 ```
 $ make get-packet-project-id
 ```
 
-Create a bootstrap node on packet.net
+## 4. Create a bootstrap node on packet.net
 Set the `PACKET_PROJECT_ID` environment variable from the command execute above then execute:
 ```
 $ export PACKET_PROJECT_ID=
