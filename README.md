@@ -3,6 +3,12 @@ A repository for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Am
 
 The repository uses [Packet.net](https://www.packet.net/) to provide the underlying infrastructure.
 
+The following two projects are used to make this demo possible:
+
+1. [Kismatic Enterprise Toolkit](https://github.com/apprenda/kismatic)
+
+2. [Kismatic Provision](https://github.com/apprenda/kismatic-provision)
+
 After provisioning the cluster the demo will show two pieces of KET functionality:
 
 1. Ingress

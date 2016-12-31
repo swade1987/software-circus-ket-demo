@@ -2,11 +2,6 @@ DEMO_NAME = software-circus
 ADDITIONAL_WORKER_NODE_NAME = new-worker-node
 ADDITIONAL_WORKER_NODE_IP =
 
-get-darwin-dependencies:
-	wget -O - https://github.com/apprenda/kismatic/releases/download/v1.1.0/kismatic-v1.1.0-darwin-amd64.tar.gz | tar -zx
-	wget -O provision https://kismatic-installer.s3-accelerate.amazonaws.com/latest-darwin/provision
-	chmod +x provision
-
 get-linux-dependencies:
 	wget -O - https://github.com/apprenda/kismatic/releases/download/v1.1.0/kismatic-v1.1.0-linux-amd64.tar.gz | tar -zx
 	wget -O provision https://kismatic-installer.s3-accelerate.amazonaws.com/latest/provision

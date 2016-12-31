@@ -13,17 +13,6 @@ $ go get -u github.com/ebsarr/packet
 $ packet admin add-profile
 ```
 
-Additionally we need to obtain the binaries for the following two projects:
-
-1. [Kismatic Enterprise Toolkit](https://github.com/apprenda/kismatic)
-
-2. [Kismatic Provision](https://github.com/apprenda/kismatic-provision)
-
-To make this possible execute the following command:
-```
-$ make get-darwin-dependencies
-```
-
 # Usage
 
 ## 1. Create a new project
