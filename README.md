@@ -1,7 +1,4 @@
-# Software Circus KET Demo
-A repository for my Kismatic Enterprise Toolkit (KET) demo at Software Circus Amsterdam (10th Jan 2017).
-
-The repository uses [Packet.net](https://www.packet.net/) to provide the underlying infrastructure.
+# Kismatic Enterprise Toolkit Demo using Packet.net
 
 The following two projects are used to make this demo possible:
 
@@ -9,7 +6,9 @@ The following two projects are used to make this demo possible:
 
 2. [Kismatic Provision](https://github.com/apprenda/kismatic-provision)
 
-Follow the steps below to create the cluster and execute the ingress and add-worker demos.
+Additionally, the demo uses [Packet.net](https://www.packet.net/) to provide the underlying infrastructure.
+
+Follow the steps below to create the cluster and execute the demonstrations
 
 # 1. Cluster creation
 To setup the cluster to use with this demo, follow the steps [here](docs/local-machine-setup.md)
