@@ -10,11 +10,8 @@ Additionally, the demo uses [Packet.net](https://www.packet.net/) to provide the
 
 Follow the steps below to create the cluster and execute the demonstrations
 
-# 1. Cluster creation
-To setup the cluster to use with this demo, follow the steps [here](docs/local-machine-setup.md)
+1. Cluster creation - To setup the cluster to use with this demo, follow the steps [here](docs/local-machine-setup.md)
 
-# 2. Ingress demonstration
+2. Ingress demonstration -
 
-
-# 3. Adding a worker demonstration
-To demonstration adding a new worker to the cluster, follow the steps [here](docs/adding-a-worker-node.md)
+3. Adding a worker node - To demonstrate adding a new worker to the cluster, follow the steps [here](docs/adding-a-worker-node.md)
