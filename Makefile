@@ -1,5 +1,5 @@
 DEMO_NAME = software-circus
-ADDITIONAL_WORKER_NODE_NAME = worker-06
+ADDITIONAL_WORKER_NODE_NAME = new-worker-node
 ADDITIONAL_WORKER_NODE_IP =
 
 get-darwin-dependencies:
