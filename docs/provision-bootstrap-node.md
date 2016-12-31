@@ -24,7 +24,7 @@ $ sudo chown -R root:root ./go
 $ sudo mv go /usr/local
 ```
 
-## 2. Installation Kubectl
+## 2. Install Kubectl
 
 ```
 $ wget https://storage.googleapis.com/kubernetes-release/release/v1.4.4/bin/linux/amd64/kubectl
