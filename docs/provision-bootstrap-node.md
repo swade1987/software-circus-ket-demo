@@ -15,21 +15,21 @@ $ sudo apt-get install jq
 $ sudo apt-get install git
 ```
 
-## 1. Install Golang
+## 1. Install Kubectl
+
+```
+$ wget https://storage.googleapis.com/kubernetes-release/release/v1.4.4/bin/linux/amd64/kubectl
+$ chmod +x kubectl
+$ mv kubectl /usr/local/bin/kubectl
+```
+
+## 2. Install Golang
 
 ```
 $ curl -O https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
 $ tar xvf go1.6.linux-amd64.tar.gz
 $ sudo chown -R root:root ./go
 $ sudo mv go /usr/local
-```
-
-## 2. Install Kubectl
-
-```
-$ wget https://storage.googleapis.com/kubernetes-release/release/v1.4.4/bin/linux/amd64/kubectl
-$ chmod +x kubectl
-$ mv kubectl /usr/local/bin/kubectl
 ```
 
 ## 3. Configure Golang
