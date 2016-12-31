@@ -23,3 +23,4 @@ To setup the cluster to use with this demo, follow the steps [here](docs/local-m
 
 
 # 3. Adding a worker demonstration
+To demonstration adding a new worker to cluster, follow the steps [here](docs/adding-a-worker-node.md)
