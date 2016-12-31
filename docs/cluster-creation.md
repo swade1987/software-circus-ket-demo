@@ -34,7 +34,7 @@ ssh_key: ./software-circus.pem
 needs to be changed to be the **full** path, something like
 
 ```
-ssh_key: /Users/StevenWade/projects/github/swade1987/software-circus-ket-demo/software-circus.pem
+ssh_key: /root/software-circus-ket-demo/software-circus.pem
 ```
 
 ## 3. Provision infrastructure using KET
