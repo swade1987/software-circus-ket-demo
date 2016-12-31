@@ -15,9 +15,6 @@ get-linux-dependencies:
 create-packet-project:
 	packet admin create-project --name "$(DEMO_NAME)"
 
-generate-ssh-keypair:
-	ssh-keygen -t rsa -f $(DEMO_NAME).pem -N ""
-
 upload-packet-ssh-key:
 	packet admin create-sshkey --label $(DEMO_NAME) --file $(DEMO_NAME).pem.pub
 
@@ -30,9 +27,9 @@ get-packet-api-key:
 create-infrastructure:
 	chmod 600 $(DEMO_NAME).pem
 	./provision packet create -e 3 -m 2 -w 5 --region us-east
+	sed -i "/\b\(internalip\)\b/d" kismatic-cluster.yaml
 
 provision-cluster:
-	sed -i "/\b\(internalip\)\b/d" kismatic-cluster.yaml
 	./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
 
@@ -52,6 +49,9 @@ create-bootstrap-node:
 
 add-worker-node-to-cluster:
 	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) $(ADDITIONAL_WORKER_NODE_IP)
+
+get-nodes:
+	kubectl --kubeconfig kubeconfig get nodes
 
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 100apis/software-circus
