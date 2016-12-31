@@ -33,7 +33,7 @@ provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
 
-create-packet-new-worker-node:
+create-new-worker-node:
 	packet baremetal create-device \
 	--facility ewr1 \
 	--hostname $(ADDITIONAL_WORKER_NODE_NAME) \
@@ -54,4 +54,4 @@ get-nodes:
 	kubectl --kubeconfig kubeconfig get nodes
 
 clean:
-	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision 100apis/software-circus
+	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision
