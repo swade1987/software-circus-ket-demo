@@ -24,7 +24,15 @@ $ sudo chown -R root:root ./go
 $ sudo mv go /usr/local
 ```
 
-## 2. Configure Golang
+## 2. Installation Kubectl
+
+```
+$ wget https://storage.googleapis.com/kubernetes-release/release/v1.4.4/bin/linux/amd64/kubectl
+$ chmod +x kubectl
+$ mv kubectl /usr/local/bin/kubectl
+```
+
+## 3. Configure Golang
 
 Open the profile file using the command below:
 
@@ -45,26 +53,26 @@ Finally reload your profile:
 $ source ~/.profile
 ```
 
-## 3. Download and install the Packet CLI
+## 4. Download and install the Packet CLI
 
 ```
 $ go get -u github.com/ebsarr/packet
 $ packet admin add-profile
 ```
 
-## 4. Clone this directory
+## 5. Clone this directory
 
 ```
 $ git clone https://github.com/swade1987/software-circus-ket-demo.git
 ```
 
-## 5. Download the necessary dependencies for this demo
+## 6. Download the necessary dependencies for this demo
 
 ```
 $ cd software-circus-ket-demo
 $ make get-linux-dependencies
 ```
 
-## 6. Cluster creation
+## 7. Cluster creation
 
 To created the kubernetes cluster follow the steps [here](cluster-creation.md)
