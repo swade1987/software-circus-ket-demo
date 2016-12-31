@@ -1,4 +1,4 @@
-# Kismatic Enterprise Toolkit Demo using Packet.net
+# Kismatic Enterprise Toolkit demo using Packet.net
 
 The following two projects are used to make this demo possible:
 
@@ -6,7 +6,7 @@ The following two projects are used to make this demo possible:
 
 2. [Kismatic Provision](https://github.com/apprenda/kismatic-provision)
 
-Additionally, the demo uses [Packet.net](https://www.packet.net/) to provide the underlying infrastructure.
+Note: The demo requires you to have a [Packet.net](https://www.packet.net/) account to provide the underlying infrastructure.
 
 Follow the steps below to create the cluster and execute the demonstrations
 
