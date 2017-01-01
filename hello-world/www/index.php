@@ -87,6 +87,7 @@ else {
     }
 ?>
     </table>
+    <a href="https://www.kubernetes.com"><img class="logo" src="kubernetes-logo.png" /></a>
     <a href="https://www.apprenda.com"><img class="logo" src="apprenda.png" /></a>
 </div></body>
 </html>
