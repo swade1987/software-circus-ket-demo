@@ -8,11 +8,11 @@ spec:
    metadata:
      labels:
        app: hello-world
-       version: 0.1.7
+       version: 0.1.8
    spec:
      containers:
      - name: hello-world
-       image: quay.io/swade1987/hello-world:0.1.7
+       image: quay.io/swade1987/hello-world:0.1.8
        imagePullPolicy: Always
        readinessProbe:
          httpGet:
@@ -30,7 +30,7 @@ spec:
          - name: NAME
            value: Amsterdam
          - name: VERSION
-           value: 0.1.7
+           value: 0.1.8
          - name: MY_POD_NAME
            valueFrom:
             fieldRef:
