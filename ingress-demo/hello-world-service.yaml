@@ -1,0 +1,49 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: hello-world
+spec:
+ replicas: 2
+ template:
+   metadata:
+     labels:
+       app: hello-world
+       version: 0.1.7
+   spec:
+     containers:
+     - name: hello-world
+       image: quay.io/swade1987/hello-world:0.1.7
+       imagePullPolicy: Always
+       readinessProbe:
+         httpGet:
+           path: /
+           port: 8080
+       livenessProbe:
+         httpGet:
+           path: /
+           port: 8080
+         initialDelaySeconds: 30
+         timeoutSeconds: 1
+       ports:
+       - containerPort: 8080
+       env:
+         - name: NAME
+           value: Amsterdam
+         - name: VERSION
+           value: 0.1.7
+         - name: MY_POD_NAME
+           valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+         - name: MY_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+         - name: MY_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: HOSTNAME
+             valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
