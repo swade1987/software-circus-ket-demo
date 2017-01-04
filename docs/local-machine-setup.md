@@ -17,17 +17,17 @@ $ packet admin add-profile
 
 ## 1. Create a new project
 ```
-$ make create-packet-project
+$ make create-project
 ```
 
 ## 2. Upload the SSH key to packet.net
 ```
-$ make upload-packet-ssh-key
+$ make upload-ssh-key
 ```
 
 ## 3. Obtain the Project ID from packet.net.
 ```
-$ make get-packet-project-id
+$ make get-project-id
 ```
 
 ## 4. Create a bootstrap node on packet.net

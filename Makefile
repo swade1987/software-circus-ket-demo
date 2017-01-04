@@ -18,16 +18,16 @@ clean:
 # Packet CLI commands
 # ###################################
 
-create-packet-project:
+create-project:
 	packet admin create-project --name "$(DEMO_NAME)"
 
-upload-packet-ssh-key:
+upload-ssh-key:
 	packet admin create-sshkey --label $(DEMO_NAME) --file $(DEMO_NAME).pem.pub
 
-get-packet-project-id:
+get-project-id:
 	packet admin list-profiles | grep ^default | awk '{ print $$3 }'
 
-get-packet-api-key:
+get-api-key:
 	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
 
 get-new-worker-node-ip:
