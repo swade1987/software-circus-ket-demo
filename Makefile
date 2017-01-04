@@ -53,3 +53,8 @@ get-nodes:
 
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision
+
+deploy-hello-world-app:
+	kubectl --kubeconfig kubeconfig apply -f ingress-demo/hello-world-ingress.yaml
+	kubectl --kubeconfig kubeconfig apply -f ingress-demo/hello-world-service.yaml
+	kubectl --kubeconfig kubeconfig apply -f ingress-demo/hello-world-deployment.yaml
