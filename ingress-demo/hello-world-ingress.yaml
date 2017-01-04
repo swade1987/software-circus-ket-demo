@@ -10,4 +10,4 @@ spec:
        backend:
          serviceName: hello-world
          servicePort: 8080
-   host: hello-world.192.168.99.100.nip.io
+   host: hello-world.stevenwade.co.uk
