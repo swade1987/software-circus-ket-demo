@@ -10,9 +10,7 @@ $ chmod 600 software-circus.pem
 $ ssh -i software-circus.pem root@<public ip address>
 $ apt-get update
 $ apt-get upgrade
-$ sudo apt-get install build-essential
-$ sudo apt-get install jq
-$ sudo apt-get install git
+$ sudo apt-get install build-essential jq git
 ```
 
 ## 1. Install Kubectl
@@ -54,6 +52,8 @@ $ source ~/.profile
 ```
 
 ## 4. Download and install the Packet CLI
+
+To locate the Project ID for the `packet` command below visit [here](https://app.packet.net/portal#/projects/list/table)
 
 ```
 $ go get -u github.com/ebsarr/packet
