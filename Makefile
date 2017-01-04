@@ -2,9 +2,9 @@ DEMO_NAME = software-circus
 ADDITIONAL_WORKER_NODE_NAME = new-worker-node
 HELLO_WORLD_SCALE_AMOUNT = 10
 
-#	###################################
-#	General commands
-#	###################################
+# ###################################
+# General commands
+# ###################################
 
 get-linux-dependencies:
 	wget -O - https://github.com/apprenda/kismatic/releases/download/v1.1.1/kismatic-v1.1.1-linux-amd64.tar.gz | tar -zx
@@ -14,9 +14,9 @@ get-linux-dependencies:
 clean:
 	rm -rf ansible cfssl generated runs kismatic kismatic-cluster.yaml kubeconfig provision
 
-#	###################################
-#	Packet CLI commands
-#	###################################
+# ###################################
+# Packet CLI commands
+# ###################################
 
 create-packet-project:
 	packet admin create-project --name "$(DEMO_NAME)"
@@ -47,18 +47,18 @@ create-bootstrap-node:
 	--os-type ubuntu_16_04 \
 	--project-id $$PACKET_PROJECT_ID
 
-#	###################################
-#	Kismatic Provision commands
-#	###################################
+# ###################################
+# Kismatic Provision commands
+# ###################################
 
 create-infrastructure:
 	chmod 600 $(DEMO_NAME).pem
 	./provision packet create -e 3 -m 2 -w 5 --region us-east
 	sed -i "/\b\(internalip\)\b/d" kismatic-cluster.yaml
 
-#	###################################
-#	Kismatic commands
-#	###################################
+# ###################################
+# Kismatic commands
+# ###################################
 
 provision-cluster:
 	./kismatic install apply -f kismatic-cluster.yaml
@@ -67,9 +67,9 @@ provision-cluster:
 add-worker-node-to-cluster:
 	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) $(ADDITIONAL_WORKER_NODE_IP)
 
-#	###################################
-#	Kubernetes commands
-#	###################################
+# ###################################
+# Kubernetes commands
+# ###################################
 
 deploy-hello-world-app:
 	kubectl --kubeconfig kubeconfig apply -f ingress-demo/hello-world-ingress.yaml
