@@ -42,6 +42,9 @@ create-bootstrap-node:
 	--os-type ubuntu_16_04 \
 	--project-id $$PACKET_PROJECT_ID
 
+get-new-worker-node-ip:
+	packet baremetal list-devices --project-id $$PACKET_PROJECT_ID |jq '.[] | select(.hostname == "new-worker-node") | .ip_addresses[] | select(.address_family == 4 and .public == true) | .address'
+
 add-worker-node-to-cluster:
 	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) $(ADDITIONAL_WORKER_NODE_IP)
 
