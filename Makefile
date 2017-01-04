@@ -3,7 +3,7 @@ ADDITIONAL_WORKER_NODE_NAME = new-worker-node
 ADDITIONAL_WORKER_NODE_IP =
 
 get-linux-dependencies:
-	wget -O - https://github.com/apprenda/kismatic/releases/download/v1.1.0/kismatic-v1.1.0-linux-amd64.tar.gz | tar -zx
+	wget -O - https://github.com/apprenda/kismatic/releases/download/v1.1.1/kismatic-v1.1.1-linux-amd64.tar.gz | tar -zx
 	wget -O provision https://github.com/apprenda/kismatic-provision/releases/download/v1.0/provision-linux-amd64
 	chmod +x provision
 
