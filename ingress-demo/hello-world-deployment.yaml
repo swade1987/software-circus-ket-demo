@@ -8,7 +8,7 @@ spec:
     metadata:
       labels:
         app: hello-world
-        version: "0.1.9"
+        version: "0.1.10"
     spec:
       containers:
         -
@@ -18,7 +18,7 @@ spec:
               value: Amsterdam
             -
               name: VERSION
-              value: "0.1.9"
+              value: "0.1.10"
             -
               name: MY_POD_NAME
               valueFrom:
@@ -39,7 +39,7 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
-          image: "quay.io/swade1987/hello-world:0.1.9"
+          image: "quay.io/swade1987/hello-world:0.1.10"
           imagePullPolicy: Always
           livenessProbe:
             httpGet:
