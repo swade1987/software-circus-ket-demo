@@ -26,4 +26,4 @@ echo "Installing Packet CLI ..."
 go get -u github.com/ebsarr/packet
 
 echo "Installing necessary project dependencies"
-make get-linux-dependencies
+cd ../ && make get-linux-dependencies
