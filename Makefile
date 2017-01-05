@@ -83,7 +83,7 @@ deploy-hello-world-app:
 	kubectl --kubeconfig kubeconfig apply -f ingress-demo/hello-world-deployment.yaml
 
 scale-hello-world-app:
-	kubectl --kubeconfig kubeconfig scale deployment hello-world --replicas=$HELLO_WORLD_SCALE_AMOUNT
+	kubectl --kubeconfig kubeconfig scale deployment hello-world --replicas=$(HELLO_WORLD_SCALE_AMOUNT)
 
 get-nodes:
 	kubectl --kubeconfig kubeconfig get nodes
