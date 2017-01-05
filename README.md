@@ -15,3 +15,9 @@ Follow the steps below to create the cluster and execute the demonstrations
 2. Ingress demonstration -
 
 3. Adding a worker node - To demonstrate adding a new worker to the cluster, follow the steps [here](docs/adding-a-worker-node.md)
+
+# TODO
+
+1. Complete Ingress documentation.
+
+2. Re-format the hello-world deployment YAML file.
