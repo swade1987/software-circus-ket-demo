@@ -51,7 +51,7 @@ create-bootstrap-node:
 	--project-id $$PACKET_PROJECT_ID
 
 provision-bootstrap-node:
-	./bootstrap-node/provision.sh
+	 bash bootstrap-node/provision.sh
 
 # ###################################
 # Kismatic Provision commands
