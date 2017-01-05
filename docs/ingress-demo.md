@@ -1,4 +1,6 @@
-# Ingress Demo using Hello World Kubernetes application
+# Ingress Demo
+
+Note: This demo uses the [Hello World Kubernetes](https://github.com/swade1987/hello-world-kubernetes) application.
 
 To demo Ingress please execute the following from the **bootstrap** node:
 
