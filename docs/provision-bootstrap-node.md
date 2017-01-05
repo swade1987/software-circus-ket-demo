@@ -9,6 +9,8 @@ $ apt-get install git
 $ git clone https://github.com/swade1987/kismatic-packet-demo.git
 $ cd kismatic-packet-demo
 $ make provision-bootstrap-node
+$ source ~/.profile
+$ go get -u github.com/ebsarr/packet
 ```
 
 ## 1. Setup Packet CLI profile
