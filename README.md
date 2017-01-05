@@ -4,9 +4,9 @@
 
 The following two projects are used to make this demo possible:
 
-1. [Kismatic Enterprise Toolkit](https://github.com/apprenda/kismatic)
+1. [Kismatic Enterprise Toolkit (version 1.1.1)](https://github.com/apprenda/kismatic)
 
-2. [Kismatic Provision](https://github.com/apprenda/kismatic-provision)
+2. [Kismatic Provision (version 1.0)](https://github.com/apprenda/kismatic-provision)
 
 Note: The demo requires you to have a [Packet.net](https://www.packet.net/) account to provide the underlying infrastructure.
 
