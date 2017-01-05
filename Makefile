@@ -31,7 +31,10 @@ get-api-key:
 	@packet admin list-profiles | grep ^default | awk '{ print $$2 }'
 
 get-new-worker-node-ip:
-	packet baremetal list-devices --project-id $$PACKET_PROJECT_ID |jq '.[] | select(.hostname == "new-worker-node") | .ip_addresses[] | select(.address_family == 4 and .public == true) | .address'
+	@packet baremetal list-devices --project-id ${PACKET_PROJECT_ID} | jq -r '.[] | select(.hostname == "new-worker-node") | .ip_addresses[] | select(.address_family == 4 and .public == true) | .address'
+
+get-bootstrap-node-ip:
+	@packet baremetal list-devices --project-id ${PACKET_PROJECT_ID} | jq -r '.[] | select(.hostname == "bootstrap-node") | .ip_addresses[] | select(.address_family == 4 and .public == true) | .address'
 
 create-new-worker-node:
 	packet baremetal create-device \
@@ -68,7 +71,7 @@ provision-cluster:
 	cp generated/kubeconfig .
 
 add-worker-node-to-cluster:
-	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) $(ADDITIONAL_WORKER_NODE_IP)
+	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) ${NEW_WORKER_NODE_IP_ADDRESS}
 
 # ###################################
 # Kubernetes commands

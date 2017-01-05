@@ -8,15 +8,11 @@ To add a new worker node to the cluster execute the following from the **bootstr
 $ make create-new-worker-node
 ```
 
-## 2. Obtain the public IP address for the newly created node
+## 2. Obtain the public IP address for the newly created node and set the environment variable
 
 ```
-$ TODO
+$ export NEW_WORKER_NODE_IP_ADDRESS=$(make get-new-worker-node-ip)
 ```
-
-## 3. Update the Makefile
-
-Set the `ADDITIONAL_WORKER_NODE_IP` variable in the Makefile with the value from step 2
 
 ## 4. Add the new node to the cluster
 
