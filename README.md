@@ -1,5 +1,7 @@
 # Kismatic Enterprise Toolkit demo using Packet.net
 
+![KET](img/logo.png?raw=true "KET Logo") ![Packet.net](img/packet-logo.png?raw=true "Packet.net Logo")
+
 The following two projects are used to make this demo possible:
 
 1. [Kismatic Enterprise Toolkit](https://github.com/apprenda/kismatic)
