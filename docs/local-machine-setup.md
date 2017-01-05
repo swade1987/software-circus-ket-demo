@@ -16,7 +16,7 @@ $ go get -u github.com/ebsarr/packet
 
 ## 1. Setup Packet CLI profile
 
-You can locate the [API Key](https://app.packet.net/portal#/api-keys) and [Project ID](https://app.packet.net/portal#/projects/list/table) required for the profile by clicking the links in this text.
+You can locate the API Key required for the profile by clicking the [here](https://app.packet.net/portal#/api-keys).
 
 Once obtained, execute the following command and paste in the necessary values.
 
