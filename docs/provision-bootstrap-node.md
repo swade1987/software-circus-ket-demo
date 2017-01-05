@@ -12,7 +12,7 @@ $ make provision-bootstrap-node
 
 ## 1. Setup Packet CLI profile
 
-To the [API Key](https://app.packet.net/portal#/api-keys) and [Project ID](https://app.packet.net/portal#/projects/list/table) by clicking the links in this text.
+You can locate the [API Key](https://app.packet.net/portal#/api-keys) and [Project ID](https://app.packet.net/portal#/projects/list/table) required for the profile by clicking the links in this text.
 
 Once obtained, execute the following command and paste in the necessary values.
 

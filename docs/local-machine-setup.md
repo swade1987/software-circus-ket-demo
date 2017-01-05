@@ -10,27 +10,36 @@ Make sure you have Golang installed and configured and then execute the commands
 
 ```
 $ go get -u github.com/ebsarr/packet
-$ packet admin add-profile
 ```
 
 # Usage
 
-## 1. Create a new project
+## 1. Setup Packet CLI profile
+
+You can locate the [API Key](https://app.packet.net/portal#/api-keys) and [Project ID](https://app.packet.net/portal#/projects/list/table) required for the profile by clicking the links in this text.
+
+Once obtained, execute the following command and paste in the necessary values.
+
+```
+$ packet admin add-profile
+```
+
+## 2. Create a new project
 ```
 $ make create-project
 ```
 
-## 2. Upload the SSH key to packet.net
+## 3. Upload the SSH key to packet.net
 ```
 $ make upload-ssh-key
 ```
 
-## 3. Obtain the Project ID from packet.net.
+## 4. Obtain the Project ID from packet.net.
 ```
 $ make get-project-id
 ```
 
-## 4. Create a bootstrap node on packet.net
+## 5. Create a bootstrap node on packet.net
 Set the `PACKET_PROJECT_ID` environment variable from the command execute above then execute:
 ```
 $ export PACKET_PROJECT_ID=
