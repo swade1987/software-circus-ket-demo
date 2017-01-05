@@ -7,8 +7,8 @@ To create and provision the cluster execute the following from the **bootstrap**
 Execute the following commands to set the necessary environment variables:
 
 ```
-$ export PACKET_PROJECT_ID=$(make get-packet-project-id)
-$ export PACKET_API_KEY=$(make get-packet-api-key)
+$ export PACKET_PROJECT_ID=$(make get-project-id)
+$ export PACKET_API_KEY=$(make get-api-key)
 $ export PACKET_SSH_KEY_PATH=/root/software-circus-ket-demo/software-circus.pem
 ```
 
