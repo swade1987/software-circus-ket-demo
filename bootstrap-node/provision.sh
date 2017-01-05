@@ -18,9 +18,8 @@ sudo chown -R root:root ./go
 sudo mv go /usr/local
 
 echo "Updating GOPATH ..."
-echo 'export GOPATH=$HOME/work' >> ~/.profile
-echo 'export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin' >> ~/.profile
-source ~/.profile
+export GOPATH=$HOME/work
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 echo "Installing Packet CLI ..."
 go get -u github.com/ebsarr/packet
