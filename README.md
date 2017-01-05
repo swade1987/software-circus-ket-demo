@@ -26,12 +26,10 @@ Follow the steps below to create the cluster and execute the demonstrations
 
 1. Cluster creation - To setup the cluster to use with this demo, follow the steps [here](docs/local-machine-setup.md)
 
-2. Ingress demonstration -
+2. Ingress demonstration - To demonstrate Ingress, follow the steps [here](docs/ingress-demo.md)
 
 3. Adding a worker node - To demonstrate adding a new worker to the cluster, follow the steps [here](docs/adding-a-worker-node.md)
 
 # TODO
 
-1. Complete Ingress documentation.
-
-2. Re-format the hello-world deployment YAML file.
+- Re-format the hello-world deployment YAML file.
