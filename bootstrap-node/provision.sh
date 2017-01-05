@@ -12,8 +12,8 @@ chmod +x kubectl
 mv kubectl /usr/local/bin/kubectl
 
 echo "Installing Golang ..."
-curl -O https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
-tar xvf go1.6.linux-amd64.tar.gz
+curl -O https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz
+tar xvf go1.7.4.linux-amd64.tar.gz
 sudo chown -R root:root ./go
 sudo mv go /usr/local
 
