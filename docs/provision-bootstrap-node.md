@@ -5,6 +5,7 @@ The following provides the necessary steps required to provision the bootstrap n
 ## Prerequisites
 
 ```
+$ apt-get install git
 $ git clone https://github.com/swade1987/kismatic-packet-demo.git
 $ cd kismatic-packet-demo
 $ make provision-bootstrap-node
