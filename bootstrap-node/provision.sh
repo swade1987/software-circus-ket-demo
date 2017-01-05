@@ -2,8 +2,8 @@
 echo "Provisioning boostrap machine ..."
 
 echo "Installing necessary packages ..."
-apt-get update
-apt-get upgrade
+apt-get update -y
+apt-get upgrade -y
 sudo apt-get install build-essential jq git -y
 
 echo "Installing Kubectl ..."
@@ -18,11 +18,5 @@ sudo chown -R root:root ./go
 sudo mv go /usr/local
 
 echo "Updating GOPATH ..."
-export GOPATH=$HOME/work
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-echo "Installing Packet CLI ..."
-go get -u github.com/ebsarr/packet
-
-echo "Installing necessary project dependencies"
-cd ../ && make get-linux-dependencies
+echo 'export GOPATH=$HOME/work' >> ~/.profile
+echo 'export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin' >> ~/.profile

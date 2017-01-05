@@ -50,8 +50,10 @@ create-bootstrap-node:
 	--os-type ubuntu_16_04 \
 	--project-id $$PACKET_PROJECT_ID
 
-provision-bootstrap-node:
-	bash bootstrap-node/provision.sh
+provision-bootstrap-node: get-linux-dependencies
+	bash bootstrap-node/provision.sh && /
+	source ~/.profile && /
+	go get -u github.com/ebsarr/packet
 
 # ###################################
 # Kismatic Provision commands
