@@ -9,7 +9,7 @@ Execute the following commands to set the necessary environment variables:
 ```
 $ export PACKET_PROJECT_ID=$(make get-project-id)
 $ export PACKET_API_KEY=$(make get-api-key)
-$ export PACKET_SSH_KEY_PATH=/root/software-circus-ket-demo/software-circus.pem
+$ export PACKET_SSH_KEY_PATH=/root/kismatic-packet-demo/software-circus.pem
 ```
 
 ## 2. Create the infrastructure on packet.net
