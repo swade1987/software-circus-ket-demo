@@ -25,7 +25,7 @@ upload-ssh-key:
 	packet admin create-sshkey --label $(DEMO_NAME) --file $(DEMO_NAME).pem.pub
 
 get-project-id:
-	@packet admin list-profiles | grep ^default | awk '{ print $$3 }'
+	@packet admin list-projects | jq -r '.[] | select(.name=="$(DEMO_NAME)") | .id '
 
 get-api-key:
 	@packet admin list-profiles | grep ^default | awk '{ print $$2 }'
