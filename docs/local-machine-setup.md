@@ -34,15 +34,13 @@ $ make create-project
 $ make upload-ssh-key
 ```
 
-## 4. Obtain the Project ID from packet.net.
+## 4. Set the Packet Project ID environment variable
 ```
-$ make get-project-id
+$ export PACKET_PROJECT_ID=$(make get-project-id)
 ```
 
 ## 5. Create a bootstrap node on packet.net
-Set the `PACKET_PROJECT_ID` environment variable from the command execute above then execute:
 ```
-$ export PACKET_PROJECT_ID=
 $ make create-bootstrap-node
 ```
 
