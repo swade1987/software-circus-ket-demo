@@ -4,7 +4,7 @@ echo "Provisioning boostrap machine ..."
 echo "Installing necessary packages ..."
 apt-get update
 apt-get upgrade
-sudo apt-get install build-essential jq git
+sudo apt-get install build-essential jq git -y
 
 echo "Installing Kubectl ..."
 wget https://storage.googleapis.com/kubernetes-release/release/v1.5.1/bin/linux/amd64/kubectl
