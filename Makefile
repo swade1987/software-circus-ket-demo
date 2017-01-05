@@ -25,10 +25,10 @@ upload-ssh-key:
 	packet admin create-sshkey --label $(DEMO_NAME) --file $(DEMO_NAME).pem.pub
 
 get-project-id:
-	packet admin list-profiles | grep ^default | awk '{ print $$3 }'
+	@packet admin list-profiles | grep ^default | awk '{ print $$3 }'
 
 get-api-key:
-	packet admin list-profiles | grep ^default | awk '{ print $$2 }'
+	@packet admin list-profiles | grep ^default | awk '{ print $$2 }'
 
 get-new-worker-node-ip:
 	packet baremetal list-devices --project-id $$PACKET_PROJECT_ID |jq '.[] | select(.hostname == "new-worker-node") | .ip_addresses[] | select(.address_family == 4 and .public == true) | .address'
