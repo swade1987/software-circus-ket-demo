@@ -57,4 +57,3 @@ spec:
         - containerPort:  8080
           name: hello-world
       restartPolicy: Always
-      imagePullPolicy: Always
