@@ -47,6 +47,9 @@ create-bootstrap-node:
 	--os-type ubuntu_16_04 \
 	--project-id $$PACKET_PROJECT_ID
 
+provision-bootstrap-node:
+	./bootstrap-node/provision.sh
+
 # ###################################
 # Kismatic Provision commands
 # ###################################
