@@ -2,39 +2,26 @@
 
 To create and provision the cluster execute the following from the **bootstrap** node:
 
-## 1. Create the infrastructure on packet.net
+## 1. Set the necessary environment variables
 
-Obtain the project id and set the necessary environment variable:
+Execute the following commands to obtain the API Key and Project id
 
 ```
 $ make get-packet-project-id
-$ export PACKET_PROJECT_ID=
-```
-
-Obtain the api key and set the necessary environment variable:
-
-```
 $ make get-packet-api-key
+```
+
+Now using the results of the commands above set the following environment variables:
+
+```
+$ export PACKET_PROJECT_ID=
 $ export PACKET_API_KEY=
+$ export PACKET_SSH_KEY_PATH=/root/software-circus-ket-demo/software-circus.pem
 ```
 
-Finally set the SSH key location and create the infrastructure
+## 2. Create the infrastructure on packet.net
 ```
-$ export PACKET_SSH_KEY_PATH=./software-circus.pem
 $ make create-infrastructure
-```
-
-## 2. Tweak the kismatic-cluster.yaml
-The following line in the YAML file
-
-```
-ssh_key: ./software-circus.pem
-```
-
-needs to be changed to be the **full** path, something like
-
-```
-ssh_key: /root/software-circus-ket-demo/software-circus.pem
 ```
 
 ## 3. Provision infrastructure using KET
