@@ -26,8 +26,12 @@ $ packet admin add-profile
 $ export PACKET_PROJECT_ID=$(make get-project-id)
 $ export PACKET_API_KEY=$(make get-api-key)
 $ export PACKET_SSH_KEY_PATH=/root/kismatic-packet-demo/software-circus.pem
-$ make create-infrastructure
-$ make provision-cluster
+
+$ ./provision packet create -e 3 -m 2 -w 3 --region us-east
+
+$ ./kismatic install apply -f kismatic-cluster.yaml
+
+$ cp generated/kubeconfig .
 ```
 
 ## 4. Ingres demo
@@ -38,7 +42,10 @@ $ make deploy-hello-world-app
 ## 5. Add worker demo
 ```
 $ make create-new-worker-node
+
 $ export NEW_WORKER_NODE_IP_ADDRESS=$(make get-new-worker-node-ip)
-$ make add-worker-node-to-cluster
-$ make get-nodes
+
+$ ./kismatic install add-worker new-worker-node $NEW_WORKER_NODE_IP_ADDRESS
+
+$ ./provision packet list
 ```
