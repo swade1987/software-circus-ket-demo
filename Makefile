@@ -59,7 +59,7 @@ provision-bootstrap-node: get-linux-dependencies
 
 create-infrastructure:
 	chmod 600 $(DEMO_NAME).pem
-	./provision packet create -e 3 -m 2 -w 3 --region us-east
+	time ./provision packet create -e 3 -m 2 -w 3 --region us-east
 	sed -i "/\b\(internalip\)\b/d" kismatic-cluster.yaml
 
 # ###################################
@@ -67,7 +67,7 @@ create-infrastructure:
 # ###################################
 
 provision-cluster:
-	./kismatic install apply -f kismatic-cluster.yaml
+	time ./kismatic install apply -f kismatic-cluster.yaml
 	cp generated/kubeconfig .
 
 add-worker-node-to-cluster:

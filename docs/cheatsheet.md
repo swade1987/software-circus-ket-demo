@@ -28,18 +28,24 @@ $ export PACKET_API_KEY=$(make get-api-key)
 $ export PACKET_SSH_KEY_PATH=/root/kismatic-packet-demo/software-circus.pem
 
 $ ./provision packet create -e 3 -m 2 -w 3 --region us-east
+$ ./kismatic install step _packages.yaml
 
-$ ./kismatic install apply -f kismatic-cluster.yaml
+```
+
+## 4. Provision cluster
+
+```
+$ time ./kismatic install apply -f kismatic-cluster.yaml
 
 $ cp generated/kubeconfig .
 ```
 
-## 4. Ingres demo
+## 5. Ingress demo
 ```
 $ make deploy-hello-world-app
 ```
 
-## 5. Add worker demo
+## 6. Add worker demo
 ```
 $ make create-new-worker-node
 
