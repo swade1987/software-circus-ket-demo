@@ -26,6 +26,7 @@ $ packet admin add-profile
 $ export PACKET_PROJECT_ID=$(make get-project-id)
 $ export PACKET_API_KEY=$(make get-api-key)
 $ export PACKET_SSH_KEY_PATH=/root/kismatic-packet-demo/software-circus.pem
+$ chmod 600 software-circus.pem
 
 $ ./provision packet create -e 3 -m 2 -w 3 --region us-east
 $ ./kismatic install step _packages.yaml

@@ -59,7 +59,7 @@ provision-bootstrap-node: get-linux-dependencies
 
 create-infrastructure:
 	chmod 600 $(DEMO_NAME).pem
-	time ./provision packet create -e 3 -m 2 -w 3 --region us-east
+	./provision packet create -e 3 -m 2 -w 3 --region us-east
 	sed -i "/\b\(internalip\)\b/d" kismatic-cluster.yaml
 
 # ###################################
