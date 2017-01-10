@@ -15,6 +15,7 @@ $ cp generated/kubeconfig .
 
 ```
 $ make deploy-hello-world-app
+$ make get-admin-password
 ```
 
 ## 6. Add worker demo
