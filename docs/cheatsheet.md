@@ -29,7 +29,7 @@ $ export PACKET_SSH_KEY_PATH=/root/kismatic-packet-demo/software-circus.pem
 $ chmod 600 software-circus.pem
 
 $ ./provision packet create -e 3 -m 2 -w 3 --region us-east
-$ ./kismatic install step _packages.yaml
+$ time ./kismatic install step _packages.yaml
 
 ```
 
@@ -52,7 +52,7 @@ $ make create-new-worker-node
 
 $ export NEW_WORKER_NODE_IP_ADDRESS=$(make get-new-worker-node-ip)
 
-$ ./kismatic install add-worker new-worker-node $NEW_WORKER_NODE_IP_ADDRESS
+$ time ./kismatic install add-worker new-worker-node $NEW_WORKER_NODE_IP_ADDRESS
 
 $ ./provision packet list
 ```
