@@ -73,6 +73,9 @@ provision-cluster:
 add-worker-node-to-cluster:
 	./kismatic install add-worker $(ADDITIONAL_WORKER_NODE_NAME) ${NEW_WORKER_NODE_IP_ADDRESS}
 
+get-admin-password:
+	@grep admin_password kismatic-cluster.yaml | sed 's/.*admin_password:[ ][ ]*\([^ ][^ ]*\).*/\1/'
+
 # ###################################
 # Kubernetes commands
 # ###################################
