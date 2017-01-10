@@ -30,7 +30,7 @@ $ chmod 600 software-circus.pem
 
 $ ./provision packet create -e 3 -m 2 -w 3 --region us-east
 $ time ./kismatic install step _packages.yaml
-
+$ sed -i "/\b\(internalip\)\b/d" kismatic-cluster.yaml
 ```
 
 ## 4. Provision cluster
